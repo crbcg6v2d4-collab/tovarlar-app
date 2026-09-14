@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Tovarlar</title>
+<meta name="theme-color" content="#17151F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tovarlar">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAFaUlEQVR4nO3dSZLTWhBG4RTBFmhmsP9VVc2qWQRv8BCohGTpSnmb/PN8EwiCwLLuqSRtU8FkA/j25cev3tcAH6/vz1PPx+/y4AScR+vAmz0YEaNF3FUfgIixp1bcVf5QQsZZ3mF/8vzDzIgZZbx7cfvqIGTc5TGtXSY0McODR0e3viIIGbVcndaXJzQxo6arfV0KmpjRwpXOioMmZrRU2ltR0MSMHkq6Ox00MaOns/2dCpqYMYIzHR4GTcwYyVGP7h99Az09DJrpjBE96nI3aGLGyPb6ZOWAlM2gmc6IYKvTf4ImZkSy7pWVA1I+BM10RkTLbpnQkELQkPInaNYNRDb3y4SGFIKGlMmMdQM6mNCQQtCQQtCQ8on9GUqY0JBC0JBC0A28vD19+BH1fO59Aar24l3++vevP5tcSyYTLwr93JnAxO2DoG+qsUYQ93UEXaj1HkzcZQj6hFFezBH3MYLeMUrEe4h7G0EvjB7xHuL+K33QLSJeBtf68bJJGfQoUY1yHUrSBD16PKNfXxTSQdeOpFYgxH2dVNCKISg+p5rCB53pwDM916tCBs3Bcg/2hAmaA3ws6usFb+n/+WiUgzrS+r3uUYWZ0GZ+B6US8Rke9yzS/Ro+aCL2k+Feyq4cI9/0XjKsJVJBE/F5871SC1sq6PlwCPuYWsgzye/6Vj0sL8r3RzJoM+1Du0P9vsgGbaZ/eKUy3A+pHXoLe3WOkGfSE3op06EulTzv719/hv/CDx90yQFki7o0ZgXhgzYrj1o97NLnqBKzmUjQZuWHohp1thVjTSZos/IDUos661Rekgp6lnEFIeb/SQZtlmcFybwvb5EN2kx/Bcm+L2+RDnqmGDVTeVuKoM109mpWjMfSBG0WfwUpvZ5sMZslC3oWMWr25XNSBm0WawVhxTgvbdBm468g7MvlUgc9GzFqVoxrCPq3kVYQpvJ1BL0wwqeLxHwPQa/02qvZl30Q9I6WKwj7sh+CfqDFCsJU9kXQB2qtIKwYdRD0SZ5Rs2LUQ9AFPPZqpnJdBF3ozgpCzPUR9EU13wUh5usI+gbv8NiX7yPom7wCJGQfBO3g7mQlZj8E7ehKmMTsi6CdlQRKzP4IugJe3PVD0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JASPuiXt6felyDj5e0p/P383PsCPGwdAv818bHo8W6RCHrL+rCyB64Y75bhg16GeOdQsgXuGXCkezV80LWoBZ5lAh8JE3TtA4u2h7cM+OXtaeh7sRQm6B5GmuJM4HPCBL2OqccBtwy8d8BRJvJamKDXtm546wi8Au8dr1ncgNemb19+/Op9EbWMEMqIVOLdIh30WtbAlQNeSxX0mmrgmQJeSx30loiRZw54jaAPjBg4Ae+bzMyI+rwegRPweQR9k3fgxHsPQVew9zF6tI/XIwr7wcrIHn2qScB1TfNPmNKI7vX9eQr/LVjAEkFDyp+gX9+fp0e/ERjZ3C8TGlIIGlI+BM3agYiW3TKhIeWfoJnSiGTd6+aEJmpEsNUpKwek7AbNlMbI9vp8OKGJGiN61CUrB6QcBs2UxkiOejw1oYkaIzjT4emVg6jR09n+inZookYPJd0VvygkarRU2tuldzmIGi1c6ezy23ZEjZqu9uUSJd9gCy93B6XLBytMa3jw6Mg9RKY1SnkORPePvpnWKOHdS9X4mNbYU2vwNZumxI0Wf3t3WQ+IO4/WK+h/anRyZ9iVDlQAAAAASUVORK5CYII=">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAFaUlEQVR4nO3dSZLTWhBG4RTBFmhmsP9VVc2qWQRv8BCohGTpSnmb/PN8EwiCwLLuqSRtU8FkA/j25cev3tcAH6/vz1PPx+/y4AScR+vAmz0YEaNF3FUfgIixp1bcVf5QQsZZ3mF/8vzDzIgZZbx7cfvqIGTc5TGtXSY0McODR0e3viIIGbVcndaXJzQxo6arfV0KmpjRwpXOioMmZrRU2ltR0MSMHkq6Ox00MaOns/2dCpqYMYIzHR4GTcwYyVGP7h99Az09DJrpjBE96nI3aGLGyPb6ZOWAlM2gmc6IYKvTf4ImZkSy7pWVA1I+BM10RkTLbpnQkELQkPInaNYNRDb3y4SGFIKGlMmMdQM6mNCQQtCQQtCQ8on9GUqY0JBC0JBC0A28vD19+BH1fO59Aar24l3++vevP5tcSyYTLwr93JnAxO2DoG+qsUYQ93UEXaj1HkzcZQj6hFFezBH3MYLeMUrEe4h7G0EvjB7xHuL+K33QLSJeBtf68bJJGfQoUY1yHUrSBD16PKNfXxTSQdeOpFYgxH2dVNCKISg+p5rCB53pwDM916tCBs3Bcg/2hAmaA3ws6usFb+n/+WiUgzrS+r3uUYWZ0GZ+B6US8Rke9yzS/Ro+aCL2k+Feyq4cI9/0XjKsJVJBE/F5871SC1sq6PlwCPuYWsgzye/6Vj0sL8r3RzJoM+1Du0P9vsgGbaZ/eKUy3A+pHXoLe3WOkGfSE3op06EulTzv719/hv/CDx90yQFki7o0ZgXhgzYrj1o97NLnqBKzmUjQZuWHohp1thVjTSZos/IDUos661Rekgp6lnEFIeb/SQZtlmcFybwvb5EN2kx/Bcm+L2+RDnqmGDVTeVuKoM109mpWjMfSBG0WfwUpvZ5sMZslC3oWMWr25XNSBm0WawVhxTgvbdBm468g7MvlUgc9GzFqVoxrCPq3kVYQpvJ1BL0wwqeLxHwPQa/02qvZl30Q9I6WKwj7sh+CfqDFCsJU9kXQB2qtIKwYdRD0SZ5Rs2LUQ9AFPPZqpnJdBF3ozgpCzPUR9EU13wUh5usI+gbv8NiX7yPom7wCJGQfBO3g7mQlZj8E7ehKmMTsi6CdlQRKzP4IugJe3PVD0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JBC0JASPuiXt6felyDj5e0p/P383PsCPGwdAv818bHo8W6RCHrL+rCyB64Y75bhg16GeOdQsgXuGXCkezV80LWoBZ5lAh8JE3TtA4u2h7cM+OXtaeh7sRQm6B5GmuJM4HPCBL2OqccBtwy8d8BRJvJamKDXtm546wi8Au8dr1ncgNemb19+/Op9EbWMEMqIVOLdIh30WtbAlQNeSxX0mmrgmQJeSx30loiRZw54jaAPjBg4Ae+bzMyI+rwegRPweQR9k3fgxHsPQVew9zF6tI/XIwr7wcrIHn2qScB1TfNPmNKI7vX9eQr/LVjAEkFDyp+gX9+fp0e/ERjZ3C8TGlIIGlI+BM3agYiW3TKhIeWfoJnSiGTd6+aEJmpEsNUpKwek7AbNlMbI9vp8OKGJGiN61CUrB6QcBs2UxkiOejw1oYkaIzjT4emVg6jR09n+inZookYPJd0VvygkarRU2tuldzmIGi1c6ezy23ZEjZqu9uUSJd9gCy93B6XLBytMa3jw6Mg9RKY1SnkORPePvpnWKOHdS9X4mNbYU2vwNZumxI0Wf3t3WQ+IO4/WK+h/anRyZ9iVDlQAAAAASUVORK5CYII=">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  :root {
+    --bg: #F3F2F7;
+    --card: #FFFFFF;
+    --line: #E4E2EC;
+    --ink: #17151F;
+    --muted: #6E6B7A;
+    --accent: #17151F;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    font-family: -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 460px; margin: 0 auto; }
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 4px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h1 .icon {
+    width: 34px; height: 34px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(23,21,31,0.04);
+  }
+  label {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 2px 6px;
+  }
+  .field { margin-bottom: 14px; position: relative; }
+  input {
+    width: 100%;
+    padding: 15px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    font-size: 17px;
+    color: var(--ink);
+    background: #fff;
+    outline: none;
+  }
+  input:focus { border-color: var(--ink); }
+  input::placeholder { color: #B7B4C2; }
+  input[readonly] { background: #F6F5F9; color: var(--muted); }
+  .suggestions {
+    position: absolute;
+    left: 0; right: 0; top: calc(100% + 6px);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(23,21,31,0.12);
+    max-height: 260px;
+    overflow-y: auto;
+    z-index: 20;
+    display: none;
+  }
+  .suggestions.show { display: block; }
+  .sug-item {
+    padding: 11px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line);
+  }
+  .sug-item:last-child { border-bottom: none; }
+  .sug-item:active { background: #F6F5F9; }
+  .sug-item .sug-name { font-size: 14px; font-weight: 600; }
+  .sug-item .sug-meta { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; justify-content: space-between; }
+  .sug-empty { padding: 14px 16px; font-size: 13px; color: var(--muted); }
+  button.add {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button.add:active { opacity: 0.85; }
+  .error {
+    color: #C0392B;
+    font-size: 13px;
+    margin: -6px 0 12px 2px;
+    display: none;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .stat {
+    background: #F6F5F9;
+    border-radius: 14px;
+    padding: 16px 8px;
+    text-align: center;
+  }
+  .stat .label { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .stat .value { font-size: 20px; font-weight: 700; }
+  .list-card { padding: 8px 20px; }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .item:last-child { border-bottom: none; }
+  .item .name { font-size: 15px; font-weight: 600; }
+  .item .meta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .item .right { text-align: right; display: flex; align-items: center; gap: 10px; }
+  .item .price { font-weight: 600; min-width: 74px; text-align: right; }
+  .qtybox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #F6F5F9;
+    border-radius: 10px;
+    padding: 4px;
+  }
+  .qtybox button {
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--line);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .qtybox button:active { opacity: 0.8; }
+  .qtybox .qtyval {
+    min-width: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .item button.del {
+    border: none;
+    background: none;
+    color: #C0392B;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 24px 0;
+  }
+  .astatka-card {
+    background: var(--ink);
+    color: #fff;
+  }
+  .astatka-card .label { font-size: 13px; color: #ACA9B8; margin-bottom: 4px; }
+  .astatka-card .balance { font-size: 34px; font-weight: 700; margin-bottom: 16px; }
+  .astatka-row { display: flex; gap: 10px; }
+  .astatka-row input {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
+    color: #fff;
+  }
+  .astatka-row input::placeholder { color: #8C899A; }
+  .astatka-row button {
+    border: none;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 18px;
+    cursor: pointer;
+  }
+  .sell-history { padding: 8px 20px; }
+  .sell-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .sell-item:last-child { border-bottom: none; }
+  .sell-item .name { font-size: 14px; font-weight: 600; }
+  .sell-item .meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .sell-item .minus { color: #C0392B; font-weight: 700; font-size: 14px; }
+  .sell-item .undo {
+    border: none;
+    background: none;
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1><span class="icon">📦</span>Tovarlar</h1>
+
+    <div class="card astatka-card">
+      <div class="label">Astatka (umumiy summa)</div>
+      <div class="balance" id="astatkaBalance">$0.00</div>
+      <div class="astatka-row">
+        <input id="astatkaInput" type="number" inputmode="decimal" step="0.01" placeholder="Summani kiriting">
+        <button onclick="setAstatka()">O'rnatish</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="field">
+        <label for="sellName">Sotilgan model</label>
+        <input id="sellName" type="text" placeholder="Model nomini yozing..." autocomplete="off" oninput="handleSellInput()" onfocus="handleSellInput()">
+        <div class="suggestions" id="sellSuggestions"></div>
+      </div>
+      <div class="field">
+        <label for="sellPrice">Narxi ($)</label>
+        <input id="sellPrice" type="number" inputmode="decimal" step="0.01" placeholder="Ro'yxatdan tanlansa avtomatik to'ladi">
+      </div>
+      <div class="field" style="margin-bottom: 8px;">
+        <label for="sellQty">Miqdori</label>
+        <input id="sellQty" type="number" inputmode="numeric" placeholder="Masalan: 1" value="1">
+      </div>
+      <p class="error" id="sellErr">Model nomi va narxini to'g'ri kiriting.</p>
+      <button class="add" onclick="sellProduct()" style="background:#C0392B;">− Sotildi, Astatkadan ayirish</button>
+    </div>
+
+    <div class="card sell-history" id="sellHistoryCard">
+      <p class="empty" id="sellEmptyMsg">Hali sotuv qayd etilmagan.</p>
+    </div>
+
+    <div class="card">
+      <div class="field">
+        <label for="name">Model nomi</label>
+        <input id="name" type="text" placeholder="Yozing: masalan GW 380, Fильтр..." autocomplete="off" oninput="handleNameInput()" onfocus="handleNameInput()">
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+      <div class="field">
+        <label for="price">Narxi ($)</label>
+        <input id="price" type="number" inputmode="decimal" step="0.01" placeholder="Ro'yxatdan tanlansa avtomatik to'ladi">
+      </div>
+      <div class="field" style="margin-bottom: 8px;">
+        <label for="qty">Miqdori</label>
+        <input id="qty" type="number" inputmode="numeric" placeholder="Masalan: 1" value="1">
+      </div>
+      <p class="error" id="err">Mahsulot nomi va narxini to'g'ri kiriting.</p>
+      <button class="add" onclick="addProduct()">+ Tovar qo'shish</button>
+    </div>
+
+    <div class="card stats">
+      <div class="stat">
+        <div class="label">Tovarlar</div>
+        <div class="value" id="statCount">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Qoldiq</div>
+        <div class="value" id="statQty">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Qiymat</div>
+        <div class="value" id="statValue">0 so'm</div>
+      </div>
+    </div>
+
+    <div class="card list-card" id="listCard">
+      <p class="empty" id="emptyMsg">Hali tovar qo'shilmagan.</p>
+    </div>
+  </div>
+
+<script>
+  const PRICE_LIST = [["Goodwell 120 A1 (HEPA 13)","Фильтр",25.0],["Goodwell 120 A2 (Washable Water)","Фильтр",20.0],["Goodwell 120 A3 (Water Purification Cartridge)","Фильтр",15.0],["Goodwell 4560","Фильтр",0.0],["Goodwell 80 A1 (HEPA 13)","Фильтр",20.0],["Goodwell 80 A2 (Washable Water)","Фильтр",15.0],["Goodwell 80 A3 (Water Purification Cartridge)","Фильтр",15.0],["Goodwell Очиститель для GWS 286","Фильтр",10.0],["Goodwell Увлажнитель для GWS 286","Фильтр",10.0],["Goodwell GWS TB15 BX","Блендер настольный",50.0],["Goodwell GWS HB10 B","Блендер ручной",45.0],["Goodwell GWS MG14 X","Мясорубка",60.0],["Goodwell GWS 120 84 W","Очиститель воздуха",270.0],["Goodwell GWS 120 85 SB","Очиститель воздуха",270.0],["Goodwell GWS 50 47 G","Очиститель воздуха",130.0],["Goodwell GWS 50 48 BR","Очиститель воздуха",130.0],["Goodwell GWS 70 52 G","Очиститель воздуха",220.0],["Goodwell GWS 70 53 BR","Очиститель воздуха",220.0],["Goodwell GWS 80 66 W","Очиститель воздуха",210.0],["Goodwell GWS 1701 BD","Чайник",23.0],["Goodwell GWS 1702 BD","Чайник",26.0],["Goodwell GWS 1703 DI","Чайник",20.0],["Goodwell GWS 1704 G","Чайник",20.0],["Goodwell BS 357 304L","Мойка (нерж)",65.0],["Goodwell BS 357B 304K","Мойка (нерж)",75.0],["Goodwell BS 452 304L","Мойка (нерж)",105.0],["Goodwell BS 457 304L","Мойка (нерж)",80.0],["Goodwell BS 697B 304K","Мойка (нерж)",150.0],["Goodwell GDF 0535","Смеситель",55.0],["Goodwell GDF 5220","Смеситель",50.0],["Goodwell GDF 5231","Смеситель",30.0],["Goodwell GDF 5232","Смеситель",30.0],["Goodwell GDF 552","Смеситель",50.0],["Goodwell GDF 746","Смеситель",75.0],["Goodwell GDF 8993","Смеситель",50.0],["Goodwell OGD 7434 B","Смеситель",35.0],["Goodwell OGD 7434 L","Смеситель",35.0],["Goodwell 833 410 BL","Вытяжка",380.0],["Goodwell 850 480 BL","Вытяжка",280.0],["Goodwell A 4492 X","Вытяжка",265.0],["Goodwell B 6560 X","Вытяжка",105.0],["Goodwell B 6590 B","Вытяжка",130.0],["Goodwell B 6590 X","Вытяжка",135.0],["Goodwell B 6660 B","Вытяжка",95.0],["Goodwell B 6760 I","Вытяжка",95.0],["Goodwell B 6860 B","Вытяжка",105.0],["Goodwell B 6960 B","Вытяжка",105.0],["Goodwell EU 5060 BI","Вытяжка",185.0],["Goodwell EU 5061 BI","Вытяжка",215.0],["Goodwell EU 5160 B","Вытяжка",245.0],["Goodwell EU 5260 B","Вытяжка",305.0],["Goodwell L 1860 W","Вытяжка",100.0],["Goodwell S 4160 X","Вытяжка",305.0],["Goodwell S 4190 X","Вытяжка",300.0],["Goodwell T 4360 BL","Вытяжка",115.0],["Goodwell T 4360 X","Вытяжка",115.0],["Goodwell T 4390 BL","Вытяжка",135.0],["Goodwell T 4390 X","Вытяжка",135.0],["Goodwell T 4460 W","Вытяжка",135.0],["Goodwell T 4461 BL","Вытяжка",155.0],["Goodwell T 4461 X","Вытяжка",155.0],["Goodwell T 4462 BL","Вытяжка",140.0],["Goodwell T 4463 BL","Вытяжка",145.0],["Goodwell T 4475 BL","Вытяжка",155.0],["Goodwell T 4475 X","Вытяжка",155.0],["Goodwell T 4491 X","Вытяжка",175.0],["Goodwell T 4560 B","Вытяжка",90.0],["Goodwell T 4560 W","Вытяжка",90.0],["Goodwell T 4560 X","Вытяжка",90.0],["Goodwell T 6460 BL","Вытяжка",135.0],["Goodwell T 6460 BR","Вытяжка",125.0],["Goodwell T 6460 X","Вытяжка",135.0],["Goodwell T 6467 BL","Вытяжка",140.0],["Goodwell T 6467 X","Вытяжка",140.0],["Goodwell T 6490 BL","Вытяжка",155.0],["Goodwell T 6490 X","Вытяжка",155.0],["Goodwell T 6767 I","Вытяжка",165.0],["Goodwell T 6775 I","Вытяжка",175.0],["Goodwell U 1460 BL","Вытяжка",80.0],["Goodwell U 9060 W","Вытяжка",60.0],["No Name MH 610 B","Вытяжка",105.0],["No Name MH 610 X","Вытяжка",105.0],["No Name MH 680 B","Вытяжка",120.0],["No Name MH 680 X","Вытяжка",120.0],["Arda SS 1535 SIX","Духовка",355.0],["Goodwell 7019 BG","Духовка",365.0],["Goodwell 7021 X","Духовка",180.0],["Goodwell 7133 BG","Духовка",385.0],["Goodwell 7210 BG","Духовка",355.0],["Goodwell 7214 BG","Духовка",505.0],["Goodwell 7216 BG","Духовка",435.0],["Goodwell 7821 BG","Духовка",265.0],["Goodwell 8083 BL4","Духовка",225.0],["Goodwell 8084 BL4","Духовка",265.0],["Goodwell 81 GSE 04 BG","Духовка",295.0],["Goodwell EU 7711 BG","Духовка",425.0],["Goodwell EU 7711 X","Духовка",425.0],["Goodwell EU 7712 BG","Духовка",455.0],["Goodwell GAC - IS 12 WG/WF","Кондиционер",330.0],["Goodwell GAC - IS 18 WG/WF","Кондиционер",480.0],["Goodwell GAC - IS 24 WG/WF","Кондиционер",580.0],["Goodwell GP16 - 12 N8GP","Кондиционер",330.0],["Goodwell GP16 - 18 N8GP","Кондиционер",500.0],["Goodwell 2021 BG","Микроволновая печь",160.0],["Goodwell 2022 XM","Микроволновая печь",160.0],["Goodwell 2539 X","Микроволновая печь",185.0],["Goodwell 2621 BG","Микроволновая печь",205.0],["Goodwell 3421 BG","Микроволновая печь",235.0],["Goodwell 3433 BG","Микроволновая печь",255.0],["Goodwell 3437 GG","Микроволновая печь",235.0],["Goodwell GW 380 XL2","Морозильник",685.0],["Goodwell GWC 64014 BL4","Плита",325.0],["Goodwell GWC 64014 X4","Плита",335.0],["Goodwell 32 CK 07 KN","Поверхность",95.0],["Goodwell 32 EL 01 X","Поверхность",70.0],["Goodwell 3261 BG","Поверхность",135.0],["Goodwell 3261 X","Поверхность",130.0],["Goodwell 63 CK 3","Поверхность",185.0],["Goodwell 63131 B","Поверхность",105.0],["Goodwell 63131 X","Поверхность",105.0],["Goodwell 63142 B","Поверхность",120.0],["Goodwell 63161 B","Поверхность",135.0],["Goodwell 63161 BG","Поверхность",165.0],["Goodwell 64 CK 07","Поверхность",185.0],["Goodwell 64 CK 07 KN","Поверхность",130.0],["Goodwell 64 CK 10/1","Поверхность",130.0],["Goodwell 64 EL 02","Поверхность",95.0],["Goodwell 6403 BG","Поверхность",180.0],["Goodwell 6403 WG","Поверхность",205.0],["Goodwell 6432 BG","Поверхность",185.0],["Goodwell 6434 B","Поверхность",200.0],["Goodwell 6461 B","Поверхность",205.0],["Goodwell 6461 X","Поверхность",195.0],["Goodwell 6471 BG","Поверхность",215.0],["Goodwell 6472 BG","Поверхность",215.0],["Goodwell 7505 XL","Поверхность",235.0],["Goodwell 7531 BG","Поверхность",235.0],["Goodwell 7560 BGL","Поверхность",235.0],["Goodwell 9461 X","Поверхность",225.0],["Goodwell 95 CK 07 KN","Поверхность",175.0],["Goodwell 9531 BG","Поверхность",265.0],["Goodwell 9562 BG","Поверхность",275.0],["Goodwell 9562 X","Поверхность",285.0],["Goodwell 9563 BG","Поверхность",265.0],["Goodwell 9564 X","Поверхность",285.0],["Goodwell 9565 BG","Поверхность",295.0],["Goodwell 9565 X","Поверхность",295.0],["Goodwell EU 6400 BG","Поверхность",280.0],["Goodwell EU 6400 X","Поверхность",275.0],["Goodwell 6600 BG","Подогреватель посуды",180.0],["Goodwell GDW 0531 W","Посудомоечная машина",305.0],["Goodwell GDW 1045 BI","Посудомоечная машина",355.0],["Goodwell GDW 1264 BG","Посудомоечная машина",425.0],["Goodwell GDW 1460 X","Посудомоечная машина",405.0],["Goodwell GDW 1462 BI","Посудомоечная машина",390.0],["Goodwell GDW 1462 X","Посудомоечная машина",500.0],["Goodwell GDW 1465 BI","Посудомоечная машина",385.0],["Goodwell GDW 1661 BL","Посудомоечная машина",500.0],["Goodwell 618 G/G","Стиральная машина (авто)",220.0],["Goodwell 720 G","Стиральная машина (авто)",340.0],["Goodwell GDM 1020 G","Сушильная машина (для белья)",450.0],["Goodwell GW 270 BI5","Холодильник",670.0],["Goodwell GW 300 BI5","Холодильник",740.0],["Goodwell GW 400 BI5","Холодильник",870.0],["Goodwell GW B310 BGL2","Холодильник",565.0],["Goodwell GW B310 GRGL2","Холодильник",565.0],["Goodwell GW B310 NGGL2","Холодильник",565.0],["Goodwell GW B310 SWL2","Холодильник",565.0],["Goodwell GW B318 BGL2","Холодильник",525.0],["Goodwell GW B318 MGL2","Холодильник",525.0],["Goodwell GW B318 NGGL2","Холодильник",525.0],["Goodwell GW B318 SWL2","Холодильник",525.0],["Goodwell GW B402 BGL2","Холодильник",625.0],["Goodwell GW B402 SX2","Холодильник",605.0],["Goodwell GW B432 BGL2","Холодильник",695.0],["Goodwell GW B432 GRGL2","Холодильник",695.0],["Goodwell GW B432 MGL2","Холодильник",695.0],["Goodwell GW B432 SWL2","Холодильник",695.0],["Goodwell GW S503 BGL2","Холодильник",775.0],["Goodwell GW S503 GRGL2","Холодильник",745.0],["Goodwell GW S600 BGL2","Холодильник",1150.0],["Goodwell GW T395 BGL3","Холодильник",625.0],["Goodwell GW T465 SX2","Холодильник",595.0],["Goodwell GW T580 SX2","Холодильник",695.0],["Goodwell GTB 3500 B","Вододиспенсер",130.0],["Goodwell GTB 3500 G","Вододиспенсер",130.0],["Goodwell GTB 4100 BIM","Вододиспенсер",200.0],["Goodwell GW 1100 X","Вододиспенсер",110.0],["Goodwell GW 1500 RB","Вододиспенсер",115.0],["Goodwell GW 1600 BI","Вододиспенсер",185.0],["Goodwell GW 2200 B","Вододиспенсер",85.0],["Goodwell GW 2600 B","Вододиспенсер",85.0],["Goodwell GW 2700 X","Вододиспенсер",115.0],["Goodwell GW 2900 BB","Вододиспенсер",110.0],["Goodwell GW 45","Мини печь",95.0],["Goodwell GW 45 B","Мини печь",95.0],["Goodwell GW 58","Мини печь",120.0],["Goodwell GW 58 B","Мини печь",120.0],["Goodwell GMF 2012 BL","Микроволновая печь",65.0],["Goodwell GMF 2012 X","Микроволновая печь",65.0],["Goodwell GMF 2303 BL","Микроволновая печь",85.0],["Goodwell GMF 2308 BL","Микроволновая печь",75.0],["Goodwell GMF 2309 BL","Микроволновая печь",85.0],["Goodwell GMF 2311 BL","Микроволновая печь",85.0],["Goodwell GVC B0122 GR","Пылесос",95.0],["Goodwell GVC C0120 GR","Пылесос",78.0],["Goodwell GVC C0220 BL","Пылесос",85.0],["Goodwell GCF 197 W","Морозильник (Горизантальная)",240.0],["Goodwell GCF 297 W","Морозильник (Горизантальная)",300.0]];
+  let products = [];
+  let selectedIdx = -1;
+  let currentMatches = [];
+  let astatka = 0;
+  let soldHistory = [];
+  let currentSellMatches = [];
+
+  const STORAGE_KEY = 'tovarlar_astatka_data_v1';
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ products, astatka, soldHistory }));
+    } catch (e) {
+      // saqlash imkoni bo'lmasa (masalan cheklangan muhitda) jim o'tkazib yuboriladi
+    }
+  }
+
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const data = JSON.parse(raw);
+      if (Array.isArray(data.products)) products = data.products;
+      if (typeof data.astatka === 'number') astatka = data.astatka;
+      if (Array.isArray(data.soldHistory)) soldHistory = data.soldHistory;
+    } catch (e) {
+      // buzilgan ma'lumot bo'lsa e'tiborsiz qoldiriladi
+    }
+  }
+
+  // Telegram Mini App ichida ochilgan bo'lsa, uni to'liq ekranga moslashtirish
+  if (window.Telegram && window.Telegram.WebApp) {
+    try {
+      window.Telegram.WebApp.ready();
+      window.Telegram.WebApp.expand();
+    } catch (e) {}
+  }
+
+  function formatUsd(n) {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function handleNameInput() {
+    const nameEl = document.getElementById('name');
+    const box = document.getElementById('suggestions');
+    const q = nameEl.value.trim().toLowerCase();
+
+    document.getElementById('price').readOnly = false;
+
+    if (!q) {
+      box.classList.remove('show');
+      box.innerHTML = '';
+      currentMatches = [];
+      return;
+    }
+
+    currentMatches = PRICE_LIST.filter(p => p[0].toLowerCase().includes(q)).slice(0, 30);
+
+    if (currentMatches.length === 0) {
+      box.innerHTML = '<div class="sug-empty">Ro\'yxatda topilmadi — narxni qo\'lda kiriting.</div>';
+      box.classList.add('show');
+      return;
+    }
+
+    box.innerHTML = currentMatches.map((p, i) => `
+      <div class="sug-item" onclick="selectProduct(${i})">
+        <div class="sug-name">${escapeHtml(p[0])}</div>
+        <div class="sug-meta"><span>${escapeHtml(p[1])}</span><span>${formatUsd(p[2])}</span></div>
+      </div>
+    `).join('');
+    box.classList.add('show');
+  }
+
+  function selectProduct(i) {
+    const p = currentMatches[i];
+    if (!p) return;
+    document.getElementById('name').value = p[0];
+    document.getElementById('price').value = p[2];
+    document.getElementById('price').readOnly = true;
+    const box = document.getElementById('suggestions');
+    box.classList.remove('show');
+    box.innerHTML = '';
+    document.getElementById('qty').focus();
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.field')) {
+      document.getElementById('suggestions').classList.remove('show');
+      document.getElementById('sellSuggestions').classList.remove('show');
+    }
+  });
+
+  function renderAstatka() {
+    document.getElementById('astatkaBalance').textContent = formatUsd(astatka);
+  }
+
+  function setAstatka() {
+    const input = document.getElementById('astatkaInput');
+    const val = parseFloat(input.value);
+    if (isNaN(val) || val < 0) return;
+    astatka = val;
+    input.value = '';
+    renderAstatka();
+    saveState();
+  }
+
+  function handleSellInput() {
+    const nameEl = document.getElementById('sellName');
+    const box = document.getElementById('sellSuggestions');
+    const q = nameEl.value.trim().toLowerCase();
+
+    document.getElementById('sellPrice').readOnly = false;
+
+    if (!q) {
+      box.classList.remove('show');
+      box.innerHTML = '';
+      currentSellMatches = [];
+      return;
+    }
+
+    currentSellMatches = PRICE_LIST.filter(p => p[0].toLowerCase().includes(q)).slice(0, 30);
+
+    if (currentSellMatches.length === 0) {
+      box.innerHTML = '<div class="sug-empty">Ro\'yxatda topilmadi — narxni qo\'lda kiriting.</div>';
+      box.classList.add('show');
+      return;
+    }
+
+    box.innerHTML = currentSellMatches.map((p, i) => `
+      <div class="sug-item" onclick="selectSellProduct(${i})">
+        <div class="sug-name">${escapeHtml(p[0])}</div>
+        <div class="sug-meta"><span>${escapeHtml(p[1])}</span><span>${formatUsd(p[2])}</span></div>
+      </div>
+    `).join('');
+    box.classList.add('show');
+  }
+
+  function selectSellProduct(i) {
+    const p = currentSellMatches[i];
+    if (!p) return;
+    document.getElementById('sellName').value = p[0];
+    document.getElementById('sellPrice').value = p[2];
+    document.getElementById('sellPrice').readOnly = true;
+    document.getElementById('sellSuggestions').classList.remove('show');
+    document.getElementById('sellSuggestions').innerHTML = '';
+    document.getElementById('sellQty').focus();
+  }
+
+  function sellProduct() {
+    const nameEl = document.getElementById('sellName');
+    const priceEl = document.getElementById('sellPrice');
+    const qtyEl = document.getElementById('sellQty');
+    const err = document.getElementById('sellErr');
+
+    const name = nameEl.value.trim();
+    const price = parseFloat(priceEl.value);
+    const qty = parseInt(qtyEl.value || '1', 10);
+
+    if (!name || isNaN(price) || price <= 0 || isNaN(qty) || qty <= 0) {
+      err.style.display = 'block';
+      return;
+    }
+    err.style.display = 'none';
+
+    const total = price * qty;
+    astatka -= total;
+
+    soldHistory.unshift({
+      id: Date.now(),
+      name, price, qty, total,
+      time: new Date().toLocaleString('uz-UZ', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
+    });
+
+    nameEl.value = '';
+    priceEl.value = '';
+    priceEl.readOnly = false;
+    qtyEl.value = '1';
+    document.getElementById('sellSuggestions').classList.remove('show');
+    nameEl.focus();
+
+    renderAstatka();
+    renderSellHistory();
+    saveState();
+  }
+
+  function undoSell(id) {
+    const idx = soldHistory.findIndex(s => s.id === id);
+    if (idx === -1) return;
+    astatka += soldHistory[idx].total;
+    soldHistory.splice(idx, 1);
+    renderAstatka();
+    renderSellHistory();
+    saveState();
+  }
+
+  function renderSellHistory() {
+    const card = document.getElementById('sellHistoryCard');
+    if (soldHistory.length === 0) {
+      card.innerHTML = '<p class="empty" id="sellEmptyMsg">Hali sotuv qayd etilmagan.</p>';
+      return;
+    }
+    card.innerHTML = soldHistory.map(s => `
+      <div class="sell-item">
+        <div>
+          <div class="name">${escapeHtml(s.name)}${s.qty > 1 ? ' × ' + s.qty : ''}</div>
+          <div class="meta">${s.time}</div>
+        </div>
+        <div>
+          <span class="minus">−${formatUsd(s.total)}</span>
+          <button class="undo" onclick="undoSell(${s.id})">bekor qilish</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  loadState();
+  renderAstatka();
+  renderSellHistory();
+  render();
+
+  function addProduct() {
+    const nameEl = document.getElementById('name');
+    const priceEl = document.getElementById('price');
+    const qtyEl = document.getElementById('qty');
+    const err = document.getElementById('err');
+
+    const name = nameEl.value.trim();
+    const price = parseFloat(priceEl.value);
+    const qty = parseInt(qtyEl.value || '1', 10);
+
+    if (!name || isNaN(price) || price <= 0 || isNaN(qty) || qty <= 0) {
+      err.style.display = 'block';
+      return;
+    }
+    err.style.display = 'none';
+
+    const existing = products.find(p => p.name === name && p.price === price);
+    if (existing) {
+      existing.qty += qty;
+    } else {
+      products.push({ id: Date.now(), name, price, qty });
+    }
+    astatka += price * qty;
+    renderAstatka();
+    nameEl.value = '';
+    priceEl.value = '';
+    priceEl.readOnly = false;
+    qtyEl.value = '1';
+    document.getElementById('suggestions').classList.remove('show');
+    nameEl.focus();
+    render();
+    saveState();
+  }
+
+  function removeProduct(id) {
+    products = products.filter(p => p.id !== id);
+    render();
+    saveState();
+  }
+
+  function changeQty(id, delta) {
+    const p = products.find(p => p.id === id);
+    if (!p) return;
+    p.qty += delta;
+    if (p.qty <= 0) {
+      products = products.filter(x => x.id !== id);
+    }
+    render();
+    saveState();
+  }
+
+  function render() {
+    const listCard = document.getElementById('listCard');
+    const emptyMsg = document.getElementById('emptyMsg');
+
+    if (products.length === 0) {
+      listCard.innerHTML = '<p class="empty" id="emptyMsg">Hali tovar qo\'shilmagan.</p>';
+    } else {
+      listCard.innerHTML = products.map(p => `
+        <div class="item">
+          <div>
+            <div class="name">${escapeHtml(p.name)}</div>
+            <div class="meta">${formatUsd(p.price)} / dona</div>
+          </div>
+          <div class="right">
+            <div class="qtybox">
+              <button onclick="changeQty(${p.id}, -1)" aria-label="Kamaytirish">−</button>
+              <span class="qtyval">${p.qty}</span>
+              <button onclick="changeQty(${p.id}, 1)" aria-label="Ko'paytirish">+</button>
+            </div>
+            <span class="price">${formatUsd(p.price * p.qty)}</span>
+            <button class="del" onclick="removeProduct(${p.id})">O'chirish</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    const totalCount = products.length;
+    const totalQty = products.reduce((s, p) => s + p.qty, 0);
+    const totalValue = products.reduce((s, p) => s + p.price * p.qty, 0);
+
+    document.getElementById('statCount').textContent = totalCount;
+    document.getElementById('statQty').textContent = totalQty;
+    document.getElementById('statValue').textContent = formatUsd(totalValue);
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  render();
+</script>
+</body>
+</html>
